@@ -1,0 +1,439 @@
+2025-09-10 10:40:45,494 - recruitment_ai - INFO - Configuration loaded successfully
+2025-09-10 10:40:55,755 - recruitment_ai - INFO - Configuration loaded successfully
+2025-09-10 10:44:02,880 - recruitment_ai - INFO - Received candidate matching request for 5 resumes
+2025-09-10 10:44:02,924 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:44:02,924 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:44:04,447 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:44:04,447 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:44:04,556 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:44:12,680 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:44:12,739 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA_.pdf - Score: 0.0
+2025-09-10 10:44:12,744 - recruitment_ai - INFO - Processing resume: 91121135.pdf
+2025-09-10 10:44:12,744 - recruitment_ai - INFO - Extracting text from file: 91121135.pdf
+2025-09-10 10:44:12,972 - recruitment_ai - INFO - Successfully extracted text from PDF: 91121135.pdf
+2025-09-10 10:44:12,979 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:44:12,979 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:44:17,624 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:44:17,624 - recruitment_ai - INFO - Successfully processed 91121135.pdf - Score: 0.0
+2025-09-10 10:44:17,624 - recruitment_ai - INFO - Processing resume: 91635250.pdf
+2025-09-10 10:44:17,628 - recruitment_ai - INFO - Extracting text from file: 91635250.pdf
+2025-09-10 10:44:17,857 - recruitment_ai - INFO - Successfully extracted text from PDF: 91635250.pdf
+2025-09-10 10:44:17,857 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:44:17,857 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:44:21,114 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:44:21,114 - recruitment_ai - INFO - Successfully processed 91635250.pdf - Score: 0.0
+2025-09-10 10:44:21,114 - recruitment_ai - INFO - Processing resume: 91697974.pdf
+2025-09-10 10:44:21,114 - recruitment_ai - INFO - Extracting text from file: 91697974.pdf
+2025-09-10 10:44:21,361 - recruitment_ai - INFO - Successfully extracted text from PDF: 91697974.pdf
+2025-09-10 10:44:21,361 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:44:21,361 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:44:24,170 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:44:24,170 - recruitment_ai - INFO - Successfully processed 91697974.pdf - Score: 0.0
+2025-09-10 10:44:24,187 - recruitment_ai - INFO - Processing resume: 92069209.pdf
+2025-09-10 10:44:24,187 - recruitment_ai - INFO - Extracting text from file: 92069209.pdf
+2025-09-10 10:44:24,430 - recruitment_ai - INFO - Successfully extracted text from PDF: 92069209.pdf
+2025-09-10 10:44:24,430 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:44:24,430 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:44:25,619 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:44:25,619 - recruitment_ai - INFO - Successfully processed 92069209.pdf - Score: 0.0
+2025-09-10 10:44:25,619 - recruitment_ai - INFO - Best candidate: AI_DEVELOPER_AVINASH_SHARMA_.pdf with score 0.0
+2025-09-10 10:44:25,619 - recruitment_ai - INFO - Generating rejection email template
+2025-09-10 10:44:25,619 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-10 10:44:25,619 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-10 10:44:27,589 - recruitment_ai - ERROR - Error generating rejection email: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:44:27,589 - recruitment_ai - INFO - Candidate matching completed. Processed 5 files in 24.71 seconds
+2025-09-10 10:45:21,339 - recruitment_ai - INFO - Received candidate matching request for 5 resumes
+2025-09-10 10:45:21,400 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:45:21,403 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:45:22,225 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:45:22,236 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:45:22,236 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:45:24,497 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:45:24,579 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA_.pdf - Score: 0.0
+2025-09-10 10:45:24,579 - recruitment_ai - INFO - Processing resume: 91121135.pdf
+2025-09-10 10:45:24,589 - recruitment_ai - INFO - Extracting text from file: 91121135.pdf
+2025-09-10 10:45:25,889 - recruitment_ai - INFO - Successfully extracted text from PDF: 91121135.pdf
+2025-09-10 10:45:25,889 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:45:25,889 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:45:27,456 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:45:27,460 - recruitment_ai - INFO - Successfully processed 91121135.pdf - Score: 0.0
+2025-09-10 10:45:27,462 - recruitment_ai - INFO - Processing resume: 91635250.pdf
+2025-09-10 10:45:27,468 - recruitment_ai - INFO - Extracting text from file: 91635250.pdf
+2025-09-10 10:45:28,186 - recruitment_ai - INFO - Successfully extracted text from PDF: 91635250.pdf
+2025-09-10 10:45:28,186 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:45:28,186 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:45:29,925 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:45:29,925 - recruitment_ai - INFO - Successfully processed 91635250.pdf - Score: 0.0
+2025-09-10 10:45:29,925 - recruitment_ai - INFO - Processing resume: 91697974.pdf
+2025-09-10 10:45:29,925 - recruitment_ai - INFO - Extracting text from file: 91697974.pdf
+2025-09-10 10:45:30,381 - recruitment_ai - INFO - Successfully extracted text from PDF: 91697974.pdf
+2025-09-10 10:45:30,381 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:45:30,381 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:45:33,846 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:45:33,846 - recruitment_ai - INFO - Successfully processed 91697974.pdf - Score: 0.0
+2025-09-10 10:45:33,846 - recruitment_ai - INFO - Processing resume: 92069209.pdf
+2025-09-10 10:45:33,846 - recruitment_ai - INFO - Extracting text from file: 92069209.pdf
+2025-09-10 10:45:34,082 - recruitment_ai - INFO - Successfully extracted text from PDF: 92069209.pdf
+2025-09-10 10:45:34,090 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:45:34,090 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:45:35,048 - recruitment_ai - ERROR - Error evaluating resume: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:45:35,048 - recruitment_ai - INFO - Successfully processed 92069209.pdf - Score: 0.0
+2025-09-10 10:45:35,048 - recruitment_ai - INFO - Best candidate: AI_DEVELOPER_AVINASH_SHARMA_.pdf with score 0.0
+2025-09-10 10:45:35,048 - recruitment_ai - INFO - Generating rejection email template
+2025-09-10 10:45:35,048 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-10 10:45:35,048 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-10 10:45:35,617 - recruitment_ai - ERROR - Error generating rejection email: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proQW***********************************************************************************zCEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-09-10 10:45:35,617 - recruitment_ai - INFO - Candidate matching completed. Processed 5 files in 14.28 seconds
+2025-09-10 10:45:51,575 - recruitment_ai - INFO - Configuration loaded successfully
+2025-09-10 10:46:04,448 - recruitment_ai - INFO - Received candidate matching request for 5 resumes
+2025-09-10 10:46:04,448 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:46:04,448 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:46:05,182 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:46:05,182 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:46:05,182 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:46:11,553 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:46:11,561 - recruitment_ai - INFO - Resume evaluation completed. Score: 75.5
+2025-09-10 10:46:11,561 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA_.pdf - Score: 75.5
+2025-09-10 10:46:11,561 - recruitment_ai - INFO - Processing resume: 91121135.pdf
+2025-09-10 10:46:11,561 - recruitment_ai - INFO - Extracting text from file: 91121135.pdf
+2025-09-10 10:46:11,787 - recruitment_ai - INFO - Successfully extracted text from PDF: 91121135.pdf
+2025-09-10 10:46:11,787 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:46:11,787 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:46:18,565 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:46:18,565 - recruitment_ai - INFO - Resume evaluation completed. Score: 65.0
+2025-09-10 10:46:18,565 - recruitment_ai - INFO - Successfully processed 91121135.pdf - Score: 65.0
+2025-09-10 10:46:18,565 - recruitment_ai - INFO - Processing resume: 91635250.pdf
+2025-09-10 10:46:18,565 - recruitment_ai - INFO - Extracting text from file: 91635250.pdf
+2025-09-10 10:46:18,791 - recruitment_ai - INFO - Successfully extracted text from PDF: 91635250.pdf
+2025-09-10 10:46:18,791 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:46:18,791 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:46:21,147 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:46:21,147 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:46:21,147 - recruitment_ai - INFO - Successfully processed 91635250.pdf - Score: 72.5
+2025-09-10 10:46:21,147 - recruitment_ai - INFO - Processing resume: 91697974.pdf
+2025-09-10 10:46:21,147 - recruitment_ai - INFO - Extracting text from file: 91697974.pdf
+2025-09-10 10:46:21,305 - recruitment_ai - INFO - Successfully extracted text from PDF: 91697974.pdf
+2025-09-10 10:46:21,305 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:46:21,305 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:46:25,034 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:46:25,034 - recruitment_ai - INFO - Resume evaluation completed. Score: 65.0
+2025-09-10 10:46:25,034 - recruitment_ai - INFO - Successfully processed 91697974.pdf - Score: 65.0
+2025-09-10 10:46:25,034 - recruitment_ai - INFO - Processing resume: 92069209.pdf
+2025-09-10 10:46:25,034 - recruitment_ai - INFO - Extracting text from file: 92069209.pdf
+2025-09-10 10:46:25,218 - recruitment_ai - INFO - Successfully extracted text from PDF: 92069209.pdf
+2025-09-10 10:46:25,218 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:46:25,218 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:46:30,578 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:46:30,578 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.0
+2025-09-10 10:46:30,580 - recruitment_ai - INFO - Successfully processed 92069209.pdf - Score: 72.0
+2025-09-10 10:46:30,580 - recruitment_ai - INFO - Best candidate: AI_DEVELOPER_AVINASH_SHARMA_.pdf with score 75.5
+2025-09-10 10:46:30,580 - recruitment_ai - INFO - Generating interview email for best candidate
+2025-09-10 10:46:30,582 - recruitment_ai - INFO - Generating interview email for AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:46:30,582 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-10 10:46:34,254 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-10 10:46:34,256 - recruitment_ai - INFO - Generating rejection email template
+2025-09-10 10:46:34,256 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-10 10:46:34,256 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-10 10:46:37,797 - recruitment_ai - INFO - Rejection email generated successfully
+2025-09-10 10:46:37,797 - recruitment_ai - INFO - Candidate matching completed. Processed 5 files in 33.35 seconds
+2025-09-10 10:53:44,564 - recruitment_ai - INFO - Received candidate matching request for 10 resumes
+2025-09-10 10:53:44,593 - recruitment_ai - INFO - Processing resume: 17111768.pdf
+2025-09-10 10:53:44,593 - recruitment_ai - INFO - Extracting text from file: 17111768.pdf
+2025-09-10 10:53:45,390 - recruitment_ai - INFO - Successfully extracted text from PDF: 17111768.pdf
+2025-09-10 10:53:45,398 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:53:45,398 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:02,500 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:02,515 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:02,516 - recruitment_ai - INFO - Successfully processed 17111768.pdf - Score: 72.5
+2025-09-10 10:54:02,516 - recruitment_ai - INFO - Processing resume: 17641670.pdf
+2025-09-10 10:54:02,523 - recruitment_ai - INFO - Extracting text from file: 17641670.pdf
+2025-09-10 10:54:02,895 - recruitment_ai - INFO - Successfully extracted text from PDF: 17641670.pdf
+2025-09-10 10:54:02,895 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:02,895 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:17,641 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:17,641 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:17,648 - recruitment_ai - INFO - Successfully processed 17641670.pdf - Score: 72.5
+2025-09-10 10:54:17,648 - recruitment_ai - INFO - Processing resume: 17681064.pdf
+2025-09-10 10:54:17,648 - recruitment_ai - INFO - Extracting text from file: 17681064.pdf
+2025-09-10 10:54:17,806 - recruitment_ai - INFO - Successfully extracted text from PDF: 17681064.pdf
+2025-09-10 10:54:17,808 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:17,808 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:26,238 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:26,238 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:26,247 - recruitment_ai - INFO - Successfully processed 17681064.pdf - Score: 72.5
+2025-09-10 10:54:26,249 - recruitment_ai - INFO - Processing resume: 17688766.pdf
+2025-09-10 10:54:26,249 - recruitment_ai - INFO - Extracting text from file: 17688766.pdf
+2025-09-10 10:54:26,372 - recruitment_ai - INFO - Successfully extracted text from PDF: 17688766.pdf
+2025-09-10 10:54:26,372 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:26,372 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:29,526 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:29,526 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:29,526 - recruitment_ai - INFO - Successfully processed 17688766.pdf - Score: 72.5
+2025-09-10 10:54:29,541 - recruitment_ai - INFO - Processing resume: 17987433.pdf
+2025-09-10 10:54:29,541 - recruitment_ai - INFO - Extracting text from file: 17987433.pdf
+2025-09-10 10:54:29,762 - recruitment_ai - INFO - Successfully extracted text from PDF: 17987433.pdf
+2025-09-10 10:54:29,764 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:29,764 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:36,492 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:36,492 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:36,495 - recruitment_ai - INFO - Successfully processed 17987433.pdf - Score: 72.5
+2025-09-10 10:54:36,496 - recruitment_ai - INFO - Processing resume: 18067556.pdf
+2025-09-10 10:54:36,497 - recruitment_ai - INFO - Extracting text from file: 18067556.pdf
+2025-09-10 10:54:37,051 - recruitment_ai - INFO - Successfully extracted text from PDF: 18067556.pdf
+2025-09-10 10:54:37,051 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:37,051 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:44,822 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:44,824 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:44,825 - recruitment_ai - INFO - Successfully processed 18067556.pdf - Score: 72.5
+2025-09-10 10:54:44,825 - recruitment_ai - INFO - Processing resume: 18159866.pdf
+2025-09-10 10:54:44,825 - recruitment_ai - INFO - Extracting text from file: 18159866.pdf
+2025-09-10 10:54:45,117 - recruitment_ai - INFO - Successfully extracted text from PDF: 18159866.pdf
+2025-09-10 10:54:45,133 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:45,133 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:49,163 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:49,163 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:49,163 - recruitment_ai - INFO - Successfully processed 18159866.pdf - Score: 72.5
+2025-09-10 10:54:49,179 - recruitment_ai - INFO - Processing resume: 18176523.pdf
+2025-09-10 10:54:49,179 - recruitment_ai - INFO - Extracting text from file: 18176523.pdf
+2025-09-10 10:54:49,325 - recruitment_ai - INFO - Successfully extracted text from PDF: 18176523.pdf
+2025-09-10 10:54:49,325 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:49,325 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:52,048 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:52,048 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:52,048 - recruitment_ai - INFO - Successfully processed 18176523.pdf - Score: 72.5
+2025-09-10 10:54:52,048 - recruitment_ai - INFO - Processing resume: 18187364.pdf
+2025-09-10 10:54:52,059 - recruitment_ai - INFO - Extracting text from file: 18187364.pdf
+2025-09-10 10:54:52,338 - recruitment_ai - INFO - Successfully extracted text from PDF: 18187364.pdf
+2025-09-10 10:54:52,338 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:52,338 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:55,523 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:55,523 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 10:54:55,526 - recruitment_ai - INFO - Successfully processed 18187364.pdf - Score: 72.5
+2025-09-10 10:54:55,528 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:54:55,529 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:54:55,816 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:54:55,816 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 10:54:55,816 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 10:54:58,290 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 10:54:58,290 - recruitment_ai - INFO - Resume evaluation completed. Score: 75.0
+2025-09-10 10:54:58,290 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA_.pdf - Score: 75.0
+2025-09-10 10:54:58,420 - recruitment_ai - INFO - Best candidate: AI_DEVELOPER_AVINASH_SHARMA_.pdf with score 75.0
+2025-09-10 10:54:58,421 - recruitment_ai - INFO - Generating interview email for best candidate
+2025-09-10 10:54:58,421 - recruitment_ai - INFO - Generating interview email for AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 10:54:58,422 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-10 10:55:01,869 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-10 10:55:01,869 - recruitment_ai - INFO - Generating rejection email template
+2025-09-10 10:55:01,874 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-10 10:55:01,874 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-10 10:55:05,967 - recruitment_ai - INFO - Rejection email generated successfully
+2025-09-10 10:55:05,967 - recruitment_ai - INFO - Candidate matching completed. Processed 10 files in 81.40 seconds
+2025-09-10 11:11:20,661 - recruitment_ai - INFO - Configuration loaded successfully
+2025-09-10 11:15:02,033 - recruitment_ai - INFO - Received candidate matching request for 9 resumes
+2025-09-10 11:15:02,062 - recruitment_ai - INFO - Processing resume: 81761658.pdf
+2025-09-10 11:15:02,063 - recruitment_ai - INFO - Extracting text from file: 81761658.pdf
+2025-09-10 11:15:02,738 - recruitment_ai - INFO - Successfully extracted text from PDF: 81761658.pdf
+2025-09-10 11:15:02,738 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:15:02,739 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:15:37,811 - recruitment_ai - ERROR - Error evaluating resume: Request timed out.
+2025-09-10 11:15:38,081 - recruitment_ai - INFO - Successfully processed 81761658.pdf - Score: 0.0
+2025-09-10 11:15:38,106 - recruitment_ai - INFO - Processing resume: 83816738.pdf
+2025-09-10 11:15:38,108 - recruitment_ai - INFO - Extracting text from file: 83816738.pdf
+2025-09-10 11:15:39,030 - recruitment_ai - INFO - Successfully extracted text from PDF: 83816738.pdf
+2025-09-10 11:15:39,031 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:15:39,031 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:16:43,084 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:16:43,095 - recruitment_ai - INFO - Resume evaluation completed. Score: 75.5
+2025-09-10 11:16:43,097 - recruitment_ai - INFO - Successfully processed 83816738.pdf - Score: 75.5
+2025-09-10 11:16:43,099 - recruitment_ai - INFO - Processing resume: 89413122.pdf
+2025-09-10 11:16:43,099 - recruitment_ai - INFO - Extracting text from file: 89413122.pdf
+2025-09-10 11:16:43,264 - recruitment_ai - INFO - Successfully extracted text from PDF: 89413122.pdf
+2025-09-10 11:16:43,265 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:16:43,265 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:17:05,738 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:17:05,738 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 11:17:05,738 - recruitment_ai - INFO - Successfully processed 89413122.pdf - Score: 72.5
+2025-09-10 11:17:05,738 - recruitment_ai - INFO - Processing resume: 90867631.pdf
+2025-09-10 11:17:05,744 - recruitment_ai - INFO - Extracting text from file: 90867631.pdf
+2025-09-10 11:17:06,327 - recruitment_ai - INFO - Successfully extracted text from PDF: 90867631.pdf
+2025-09-10 11:17:06,327 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:17:06,327 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:17:18,984 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:17:18,984 - recruitment_ai - INFO - Resume evaluation completed. Score: 65.5
+2025-09-10 11:17:18,984 - recruitment_ai - INFO - Successfully processed 90867631.pdf - Score: 65.5
+2025-09-10 11:17:18,984 - recruitment_ai - INFO - Processing resume: 91121135.pdf
+2025-09-10 11:17:19,008 - recruitment_ai - INFO - Extracting text from file: 91121135.pdf
+2025-09-10 11:17:19,304 - recruitment_ai - INFO - Successfully extracted text from PDF: 91121135.pdf
+2025-09-10 11:17:19,304 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:17:19,304 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:17:35,234 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:17:35,234 - recruitment_ai - INFO - Resume evaluation completed. Score: 65.5
+2025-09-10 11:17:35,235 - recruitment_ai - INFO - Successfully processed 91121135.pdf - Score: 65.5
+2025-09-10 11:17:35,237 - recruitment_ai - INFO - Processing resume: 91635250.pdf
+2025-09-10 11:17:35,238 - recruitment_ai - INFO - Extracting text from file: 91635250.pdf
+2025-09-10 11:17:35,635 - recruitment_ai - INFO - Successfully extracted text from PDF: 91635250.pdf
+2025-09-10 11:17:35,635 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:17:35,635 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:17:38,714 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:17:38,715 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 11:17:38,715 - recruitment_ai - INFO - Successfully processed 91635250.pdf - Score: 72.5
+2025-09-10 11:17:38,716 - recruitment_ai - INFO - Processing resume: 91697974.pdf
+2025-09-10 11:17:38,716 - recruitment_ai - INFO - Extracting text from file: 91697974.pdf
+2025-09-10 11:17:38,993 - recruitment_ai - INFO - Successfully extracted text from PDF: 91697974.pdf
+2025-09-10 11:17:38,994 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:17:38,994 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:17:41,513 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:17:41,513 - recruitment_ai - INFO - Resume evaluation completed. Score: 65.5
+2025-09-10 11:17:41,513 - recruitment_ai - INFO - Successfully processed 91697974.pdf - Score: 65.5
+2025-09-10 11:17:41,513 - recruitment_ai - INFO - Processing resume: 92069209.pdf
+2025-09-10 11:17:41,513 - recruitment_ai - INFO - Extracting text from file: 92069209.pdf
+2025-09-10 11:17:41,797 - recruitment_ai - INFO - Successfully extracted text from PDF: 92069209.pdf
+2025-09-10 11:17:41,798 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:17:41,798 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:17:43,795 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:17:43,795 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 11:17:43,795 - recruitment_ai - INFO - Successfully processed 92069209.pdf - Score: 72.5
+2025-09-10 11:17:43,795 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 11:17:43,795 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 11:17:44,087 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 11:17:44,087 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:17:44,087 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:17:46,430 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:17:46,430 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.0
+2025-09-10 11:17:46,430 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA_.pdf - Score: 72.0
+2025-09-10 11:17:46,430 - recruitment_ai - INFO - Best candidate: 83816738.pdf with score 75.5
+2025-09-10 11:17:46,430 - recruitment_ai - INFO - Generating interview email for best candidate
+2025-09-10 11:17:46,430 - recruitment_ai - INFO - Generating interview email for 83816738.pdf
+2025-09-10 11:17:46,445 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-10 11:17:51,106 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-10 11:17:51,116 - recruitment_ai - INFO - Generating rejection email template
+2025-09-10 11:17:51,118 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-10 11:17:51,118 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-10 11:17:53,506 - recruitment_ai - INFO - Rejection email generated successfully
+2025-09-10 11:17:53,506 - recruitment_ai - INFO - Candidate matching completed. Processed 9 files in 171.47 seconds
+2025-09-10 11:23:26,104 - recruitment_ai - INFO - Received candidate matching request for 5 resumes
+2025-09-10 11:23:26,141 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 11:23:26,152 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 11:23:27,104 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 11:23:27,104 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:23:27,104 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:23:34,389 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:23:34,399 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 11:23:34,401 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA_.pdf - Score: 72.5
+2025-09-10 11:23:34,405 - recruitment_ai - INFO - Processing resume: 10839851.pdf
+2025-09-10 11:23:34,405 - recruitment_ai - INFO - Extracting text from file: 10839851.pdf
+2025-09-10 11:23:34,566 - recruitment_ai - INFO - Successfully extracted text from PDF: 10839851.pdf
+2025-09-10 11:23:34,567 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:23:34,567 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:23:39,115 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:23:39,115 - recruitment_ai - INFO - Resume evaluation completed. Score: 65.0
+2025-09-10 11:23:39,115 - recruitment_ai - INFO - Successfully processed 10839851.pdf - Score: 65.0
+2025-09-10 11:23:39,115 - recruitment_ai - INFO - Processing resume: 10840430.pdf
+2025-09-10 11:23:39,115 - recruitment_ai - INFO - Extracting text from file: 10840430.pdf
+2025-09-10 11:23:39,301 - recruitment_ai - INFO - Successfully extracted text from PDF: 10840430.pdf
+2025-09-10 11:23:39,301 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:23:39,301 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:23:50,499 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:23:50,499 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 11:23:50,499 - recruitment_ai - INFO - Successfully processed 10840430.pdf - Score: 72.5
+2025-09-10 11:23:50,499 - recruitment_ai - INFO - Processing resume: 11580408.pdf
+2025-09-10 11:23:50,499 - recruitment_ai - INFO - Extracting text from file: 11580408.pdf
+2025-09-10 11:23:50,664 - recruitment_ai - INFO - Successfully extracted text from PDF: 11580408.pdf
+2025-09-10 11:23:50,664 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:23:50,664 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:24:07,218 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:24:07,218 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 11:24:07,218 - recruitment_ai - INFO - Successfully processed 11580408.pdf - Score: 72.5
+2025-09-10 11:24:07,218 - recruitment_ai - INFO - Processing resume: 11584809.pdf
+2025-09-10 11:24:07,218 - recruitment_ai - INFO - Extracting text from file: 11584809.pdf
+2025-09-10 11:24:07,361 - recruitment_ai - INFO - Successfully extracted text from PDF: 11584809.pdf
+2025-09-10 11:24:07,361 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 11:24:07,361 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 11:24:11,379 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 11:24:11,395 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 11:24:11,395 - recruitment_ai - INFO - Successfully processed 11584809.pdf - Score: 72.5
+2025-09-10 11:24:11,395 - recruitment_ai - INFO - Best candidate: AI_DEVELOPER_AVINASH_SHARMA_.pdf with score 72.5
+2025-09-10 11:24:11,395 - recruitment_ai - INFO - Generating interview email for best candidate
+2025-09-10 11:24:11,395 - recruitment_ai - INFO - Generating interview email for AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 11:24:11,395 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-10 11:24:14,852 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-10 11:24:14,852 - recruitment_ai - INFO - Generating rejection email template
+2025-09-10 11:24:14,852 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-10 11:24:14,852 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-10 11:24:18,265 - recruitment_ai - INFO - Rejection email generated successfully
+2025-09-10 11:24:18,265 - recruitment_ai - INFO - Candidate matching completed. Processed 5 files in 52.16 seconds
+2025-09-10 12:06:55,124 - recruitment_ai - INFO - Configuration loaded successfully
+2025-09-10 12:23:40,323 - recruitment_ai - INFO - Configuration loaded successfully
+2025-09-10 12:33:42,847 - recruitment_ai - INFO - Received candidate matching request for 6 resumes
+2025-09-10 12:33:42,879 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 12:33:42,879 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 12:33:43,367 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 12:33:43,368 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 12:33:43,368 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 12:33:53,951 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 12:33:54,020 - recruitment_ai - INFO - Resume evaluation completed. Score: 75.0
+2025-09-10 12:33:54,021 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA_.pdf - Score: 75.0
+2025-09-10 12:33:54,022 - recruitment_ai - INFO - Processing resume: 10839851.pdf
+2025-09-10 12:33:54,022 - recruitment_ai - INFO - Extracting text from file: 10839851.pdf
+2025-09-10 12:33:54,174 - recruitment_ai - INFO - Successfully extracted text from PDF: 10839851.pdf
+2025-09-10 12:33:54,174 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 12:33:54,174 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 12:34:01,577 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 12:34:01,577 - recruitment_ai - INFO - Resume evaluation completed. Score: 65.0
+2025-09-10 12:34:01,577 - recruitment_ai - INFO - Successfully processed 10839851.pdf - Score: 65.0
+2025-09-10 12:34:01,577 - recruitment_ai - INFO - Processing resume: 10840430.pdf
+2025-09-10 12:34:01,577 - recruitment_ai - INFO - Extracting text from file: 10840430.pdf
+2025-09-10 12:34:01,788 - recruitment_ai - INFO - Successfully extracted text from PDF: 10840430.pdf
+2025-09-10 12:34:01,788 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 12:34:01,788 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 12:34:13,394 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 12:34:13,394 - recruitment_ai - INFO - Resume evaluation completed. Score: 70.0
+2025-09-10 12:34:13,394 - recruitment_ai - INFO - Successfully processed 10840430.pdf - Score: 70.0
+2025-09-10 12:34:13,395 - recruitment_ai - INFO - Processing resume: 11580408.pdf
+2025-09-10 12:34:13,526 - recruitment_ai - INFO - Extracting text from file: 11580408.pdf
+2025-09-10 12:34:13,708 - recruitment_ai - INFO - Successfully extracted text from PDF: 11580408.pdf
+2025-09-10 12:34:13,708 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 12:34:13,708 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 12:34:25,306 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 12:34:25,306 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 12:34:25,320 - recruitment_ai - INFO - Successfully processed 11580408.pdf - Score: 72.5
+2025-09-10 12:34:25,320 - recruitment_ai - INFO - Processing resume: 11584809.pdf
+2025-09-10 12:34:25,320 - recruitment_ai - INFO - Extracting text from file: 11584809.pdf
+2025-09-10 12:34:25,465 - recruitment_ai - INFO - Successfully extracted text from PDF: 11584809.pdf
+2025-09-10 12:34:25,465 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 12:34:25,465 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 12:34:30,421 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 12:34:30,422 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 12:34:30,423 - recruitment_ai - INFO - Successfully processed 11584809.pdf - Score: 72.5
+2025-09-10 12:34:30,424 - recruitment_ai - INFO - Processing resume: 11957080.pdf
+2025-09-10 12:34:30,425 - recruitment_ai - INFO - Extracting text from file: 11957080.pdf
+2025-09-10 12:34:30,944 - recruitment_ai - INFO - Successfully extracted text from PDF: 11957080.pdf
+2025-09-10 12:34:30,944 - recruitment_ai - INFO - Evaluating resume against job description
+2025-09-10 12:34:30,944 - recruitment_ai - INFO - Calling OpenAI API for resume evaluation
+2025-09-10 12:34:35,934 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-10 12:34:35,937 - recruitment_ai - INFO - Resume evaluation completed. Score: 72.5
+2025-09-10 12:34:35,940 - recruitment_ai - INFO - Successfully processed 11957080.pdf - Score: 72.5
+2025-09-10 12:34:35,940 - recruitment_ai - INFO - Best candidate: AI_DEVELOPER_AVINASH_SHARMA_.pdf with score 75.0
+2025-09-10 12:34:35,942 - recruitment_ai - INFO - Generating interview email for best candidate
+2025-09-10 12:34:35,944 - recruitment_ai - INFO - Generating interview email for AI_DEVELOPER_AVINASH_SHARMA_.pdf
+2025-09-10 12:34:35,944 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-10 12:34:43,562 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-10 12:34:43,562 - recruitment_ai - INFO - Generating rejection email template
+2025-09-10 12:34:43,562 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-10 12:34:43,564 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-10 12:34:48,815 - recruitment_ai - INFO - Rejection email generated successfully
+2025-09-10 12:34:48,815 - recruitment_ai - INFO - Candidate matching completed. Processed 6 files in 65.98 seconds
+2025-09-10 12:35:59,194 - recruitment_ai - INFO - Received email generation request: {'candidate_name': 'Professional Summary', 'position': 'AI Engineer', 'email_type': 'rejection', 'evaluation': {'score': 65.0, 'remarks': "The candidate's experience in Information Technology Service Management and project coordination is strong, but there is a significant gap in technical skills required for the Senior AI Engineer role. The industry relevance is low, and the transferability of skills to the AI engineering domain is limited.", 'missing_skills': ['Python', 'AI/ML', 'Cloud Platforms (AWS, GCP, Azure)', 'Docker', 'CI/CD Pipelines']}}
+2025-09-10 12:35:59,262 - recruitment_ai - INFO - Generating rejection email for Professional Summary
+2025-09-10 12:35:59,263 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-10 12:36:08,660 - recruitment_ai - INFO - Rejection email generated successfully
+2025-09-10 12:36:08,680 - recruitment_ai - INFO - Email generated successfully for Professional Summary
+2025-09-10 12:36:51,971 - recruitment_ai - INFO - Received email generation request: {'candidate_name': 'AI_DEVELOPER_AVINASH_SHARMA_', 'position': 'AI Engineer', 'email_type': 'interview', 'evaluation': {'score': 75.0, 'remarks': 'The candidate demonstrates strong AI development skills but lacks experience in key areas like cloud infrastructure and database optimization. Cultural fit seems good based on previous roles.', 'missing_skills': ['AWS', 'Docker', 'Kubernetes', 'CI/CD Pipelines', 'SQL/NoSQL Databases']}}
+2025-09-10 12:36:51,983 - recruitment_ai - INFO - Generating interview email for AI_DEVELOPER_AVINASH_SHARMA_
+2025-09-10 12:36:51,983 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-10 12:36:58,034 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-10 12:36:58,034 - recruitment_ai - INFO - Email generated successfully for AI_DEVELOPER_AVINASH_SHARMA_
+2025-09-10 12:38:44,407 - recruitment_ai - INFO - Received email generation request: {'candidate_name': '10840430', 'position': 'AI Engineer', 'email_type': 'interview', 'evaluation': {'score': 70.0, 'remarks': 'The candidate has strong leadership and information security experience, but lacks direct technical skills required for the role. Limited relevance to the industry and low transferability of skills.', 'missing_skills': ['Python', 'AWS', 'Docker', 'AI/ML']}}
+2025-09-10 12:38:44,455 - recruitment_ai - INFO - Generating interview email for 10840430
+2025-09-10 12:38:44,459 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-10 12:38:49,331 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-10 12:38:49,331 - recruitment_ai - INFO - Email generated successfully for 10840430

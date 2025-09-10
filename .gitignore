@@ -1,0 +1,6 @@
+
+__pycache__
+/test_files
+.env
+streamlit_app copy.py
+new.py
