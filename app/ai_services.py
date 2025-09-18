@@ -58,56 +58,186 @@ class PromptTemplates:
         """
 
     @staticmethod
-    def get_evaluation_prompt(resume_text: str, jd_text: str) -> str:
-        """Generate dynamic resume evaluation prompt"""
+    def get_jd_analysis_prompt(jd_text: str) -> str:
+        """Generate prompt for analyzing job description and extracting evaluation criteria"""
+        return f"""
+        TASK: Analyze job description and extract evaluation criteria
+        ROLE: Senior HR Analyst
+        
+        JOB DESCRIPTION:
+        {jd_text}
+        
+        Analyze this job description thoroughly and extract:
+        
+        1. ROLE TYPE: Identify if this is a technical, business, creative, or operational role
+        2. CRITICAL REQUIREMENTS: Extract must-have skills, experiences, and qualifications
+        3. IMPORTANCE LEVELS: Determine which requirements are high, medium, or low priority
+        4. INDUSTRY CONTEXT: Identify industry, company size, and team structure mentioned
+        
+        Return a JSON object with this structure:
+        {{
+          "role_type": "technical/business/creative/operational",
+          "hard_skills": [
+            {{
+              "skill": "specific skill name",
+              "importance": "high/medium/low",
+              "description": "specific context from JD",
+              "validation_approach": "how to verify this from resume"
+            }}
+          ],
+          "soft_skills": [
+            {{
+              "skill": "specific skill name",
+              "importance": "high/medium/low",
+              "description": "specific context from JD",
+              "validation_approach": "how to verify this from resume"
+            }}
+          ],
+          "experience_requirements": [
+            {{
+              "requirement": "specific experience needed",
+              "importance": "high/medium/low",
+              "description": "details from JD"
+            }}
+          ],
+          "industry_context": "description of industry/company context"
+        }}
+        
+        Be extremely specific and ground every point in the actual JD text.
+        """
+
+    @staticmethod
+    def get_dynamic_evaluation_prompt(jd_analysis: Dict[str, Any], jd_text: str, resume_text: str) -> str:
+        """Generate dynamic evaluation prompt based on JD analysis"""
+
+        evaluation_criteria = ""
+        
+        if jd_analysis.get('hard_skills'):
+            evaluation_criteria += "HARD SKILLS EVALUATION:\n"
+            for skill in jd_analysis['hard_skills']:
+                evaluation_criteria += f"- {skill['skill']}: {skill['description']} (Importance: {skill['importance']})\n"
+                evaluation_criteria += f"  Validation: {skill['validation_approach']}\n\n"
+        
+        if jd_analysis.get('soft_skills'):
+            evaluation_criteria += "SOFT SKILLS EVALUATION:\n"
+            for skill in jd_analysis['soft_skills']:
+                evaluation_criteria += f"- {skill['skill']}: {skill['description']} (Importance: {skill['importance']})\n"
+                evaluation_criteria += f"  Validation: {skill['validation_approach']}\n\n"
+        
+        if jd_analysis.get('experience_requirements'):
+            evaluation_criteria += "EXPERIENCE REQUIREMENTS:\n"
+            for req in jd_analysis['experience_requirements']:
+                evaluation_criteria += f"- {req['requirement']}: {req['description']} (Importance: {req['importance']})\n\n"
+        
+
+        role_type = jd_analysis.get('role_type', '').lower()
+        scoring_guidance = ""
+        
+        if 'technical' in role_type or 'developer' in role_type or 'engineer' in role_type:
+            scoring_guidance = """
+            TECHNICAL ROLE SCORING GUIDANCE:
+            - Hard Skills: Weight heavily (0-10 scale, be strict about specific technologies)
+            - Soft Skills: Secondary importance but still valuable
+            - Experience: Critical for senior roles, important for all technical positions
+            - Look for: Specific technologies, project experience, technical achievements
+            """
+        elif 'manager' in role_type or 'account' in role_type or 'business' in role_type:
+            scoring_guidance = """
+            BUSINESS ROLE SCORING GUIDANCE:
+            - Soft Skills: Weight heavily (communication, leadership, client management)
+            - Experience: Very important (industry experience, team size managed)
+            - Hard Skills: Secondary but still relevant (tools, software, methodologies)
+            - Look for: Revenue impact, team leadership, client relationships
+            """
+        elif 'creative' in role_type or 'design' in role_type:
+            scoring_guidance = """
+            CREATIVE ROLE SCORING GUIDANCE:
+            - Portfolio quality: Most important (if mentioned in resume)
+            - Technical skills: Tools and software proficiency
+            - Soft Skills: Collaboration, creativity, communication
+            - Look for: Project diversity, technical versatility, creative achievements
+            """
+        else:
+            scoring_guidance = """
+            GENERAL SCORING GUIDANCE:
+            - Balance hard and soft skills based on apparent role requirements
+            - Consider industry context and company needs
+            - Prioritize requirements marked as 'high' importance
+            """
+
         return f"""
         TASK: Comprehensive resume evaluation against job description
         ROLE: Senior Technical Recruiter
-        EVALUATION FRAMEWORK: STAR method (Situation, Task, Action, Result)
         
         JOB DESCRIPTION CONTEXT:
         {jd_text[:2000]}... [truncated if too long]
         
-        RESUME CONTENT:
+        JOB ANALYSIS:
+        - Role Type: {jd_analysis.get('role_type', 'Not specified')}
+        - Industry Context: {jd_analysis.get('industry_context', 'Not specified')}
+        
+        EVALUATION CRITERIA:
+        {evaluation_criteria if evaluation_criteria else "No specific criteria extracted from JD."}
+        
+        SCORING APPROACH:
+        {scoring_guidance}
+        
+        SCORING SCALE (0-10 for each criterion):
+        - 0: No evidence or completely irrelevant
+        - 1-3: Minimal exposure, below requirements
+        - 4-6: Some relevant experience, meets basic requirements  
+        - 7-8: Good match, meets most requirements well
+        - 9-10: Excellent match, exceeds requirements with strong evidence
+        
+        CANDIDATE RESUME:
         {resume_text[:3000]}... [truncated if too long]
+        
+        EVALUATION INSTRUCTIONS:
+        1. Evaluate the candidate against EACH specific criterion listed above
+        2. For each criterion, provide:
+           - Score (0-10)
+           - Specific reason based on resume evidence
+           - Direct quote or example from resume that supports your assessment
+        3. Consider the importance level (high/medium/low) when scoring
+        4. Provide an overall assessment considering role context and industry needs
+        5. Be brutally honest - underestimate rather than overestimate qualifications
         
         OUTPUT FORMAT: Strict JSON structure
         {{
-            "score": 85.5,
-            "strength_areas": ["Backend Development", "System Architecture", "Team Leadership"],
-            "missing_skills": ["Python", "AWS", "Docker"],
-            "experience_gap_analysis": {{
-                "years_match": true,
-                "industry_relevance": "High",
-                "skill_transferability": "Medium"
-            }},
-            "cultural_fit_indicators": ["Startup experience", "Agile methodology", "Open source contributions"],
-            "red_flags": ["Employment gaps", "Job hopping pattern"],
-            "remarks": "Candidate shows strong backend development experience but lacks cloud infrastructure skills. Good cultural fit based on previous company experience.",
-            "recommendation": "Proceed to technical screening",
-            "interview_focus_areas": ["Cloud experience", "Scalability challenges", "Team management approach"]
+          "hard_skills": {{
+            "<exact_criterion_name>": {{
+              "score": <number>,
+              "reason": "<specific justification>",
+              "evidence": "<resume excerpt>",
+              "importance": "<high/medium/low>"
+            }}
+          }},
+          "soft_skills": {{
+            "<exact_criterion_name>": {{
+              "score": <number>, 
+              "reason": "<specific justification>",
+              "evidence": "<resume excerpt>",
+              "importance": "<high/medium/low>"
+            }}
+          }},
+          "experience_requirements": {{
+            "<exact_criterion_name>": {{
+              "score": <number>,
+              "reason": "<specific justification>", 
+              "evidence": "<resume excerpt>",
+              "importance": "<high/medium/low>"
+            }}
+          }},
+          "overall_assessment": {{
+            "summary": "<2-3 sentence overall assessment>",
+            "strengths": ["list of key strengths"],
+            "concerns": ["list of potential gaps"],
+            "recommendation": "<hire/consider/reject>"
+          }},
+          "calculated_score": <weighted_score_0-100>
         }}
         
-        EVALUATION CRITERIA:
-        1. Technical Skills Alignment (40% weight)
-        2. Experience Relevance (25% weight)
-        3. Education & Certifications (15% weight)
-        4. Cultural & Team Fit (10% weight)
-        5. Achievement & Impact Metrics (10% weight)
-        
-        SCORING GUIDELINES:
-        - 90-100: Exceptional match, exceeds requirements
-        - 80-89: Strong candidate, meets all key requirements
-        - 70-79: Good potential, some skill gaps
-        - 60-69: Marginal candidate, significant gaps
-        - Below 60: Poor match, does not meet requirements
-        
-        BE OBJECTIVE AND CONSTRUCTIVE:
-        - Provide specific examples from resume
-        - Highlight transferable skills
-        - Note potential overqualification
-        - Consider career progression patterns
-        - Assess communication quality through resume structure
+        IMPORTANT: Use the exact same criterion names as listed in the evaluation criteria above.
         """
 
     @staticmethod
@@ -188,6 +318,73 @@ class PromptTemplates:
         - No specific criticism of candidate
         """
 
+def analyze_job_description(jd_text: str) -> Dict[str, Any]:
+    """Analyze job description to extract evaluation criteria"""
+    logger.info("Analyzing job description to extract evaluation criteria")
+    
+    try:
+        prompt = PromptTemplates.get_jd_analysis_prompt(jd_text)
+        
+        response = client.chat.completions.create(
+            model=settings.MODEL_NAME,
+            messages=[
+                {"role": "system", "content": PromptTemplates.HR_PROFESSIONAL},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=2000,
+            temperature=0.1,
+            top_p=0.95,
+            response_format={"type": "json_object"}
+        )
+        
+        result_text = response.choices[0].message.content.strip()
+        jd_analysis = json.loads(result_text)
+        
+        logger.info("Job description analysis completed successfully")
+        return jd_analysis
+        
+    except Exception as e:
+        logger.error(f"Error analyzing job description: {str(e)}")
+
+        return {
+            "role_type": "general",
+            "hard_skills": [],
+            "soft_skills": [],
+            "experience_requirements": [],
+            "industry_context": "Unknown"
+        }
+
+def calculate_weighted_score(evaluation_data: Dict[str, Any]) -> float:
+    """Calculate weighted score based on importance levels"""
+    total_score = 0
+    total_weight = 0
+    criteria_count = 0
+    
+    for category in ['hard_skills', 'soft_skills', 'experience_requirements']:
+        for criterion_name, evaluation in evaluation_data.get(category, {}).items():
+            score = evaluation.get('score', 0)
+            importance = evaluation.get('importance', 'medium').lower()
+            
+
+            if importance == 'high':
+                weight = 1.5
+            elif importance == 'medium':
+                weight = 1.0
+            else:  # low
+                weight = 0.5
+                
+            total_score += score * weight
+            total_weight += weight
+            criteria_count += 1
+    
+    if total_weight == 0:
+        return 0
+    
+    raw_score = (total_score / total_weight) * 10
+    final_score = min(100, max(0, raw_score))
+    
+    return final_score
+
 def generate_job_description(jd_input: Dict[str, Any]) -> str:
     """Generate a job description using AI"""
     logger.info(f"Generating job description with input: {jd_input}")
@@ -217,13 +414,13 @@ def generate_job_description(jd_input: Dict[str, Any]) -> str:
         raise Exception(f"Job description generation failed: {str(e)}")
 
 def evaluate_resume(resume_text: str, jd_text: str) -> EvaluationResult:
-    """Evaluate a resume against a job description using AI"""
-    logger.info("Evaluating resume against job description")
+    """Evaluate a resume against a job description using AI with dynamic scoring"""
+    logger.info("Evaluating resume against job description with dynamic scoring")
     
     try:
-        logger.info("Calling OpenAI API for resume evaluation")
+        jd_analysis = analyze_job_description(jd_text)
         
-        prompt = PromptTemplates.get_evaluation_prompt(resume_text, jd_text)
+        prompt = PromptTemplates.get_dynamic_evaluation_prompt(jd_analysis, jd_text, resume_text)
         
         response = client.chat.completions.create(
             model=settings.MODEL_NAME,
@@ -231,8 +428,8 @@ def evaluate_resume(resume_text: str, jd_text: str) -> EvaluationResult:
                 {"role": "system", "content": PromptTemplates.TECHNICAL_RECRUITER},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=1500,
-            temperature=0.2,  # Lower temperature for more consistent evaluations
+            max_tokens=3000,
+            temperature=0.2,
             top_p=0.95,
             response_format={"type": "json_object"}
         )
@@ -243,16 +440,29 @@ def evaluate_resume(resume_text: str, jd_text: str) -> EvaluationResult:
         try:
             evaluation_data = json.loads(result_text)
             
+
+            calculated_score = evaluation_data.get("calculated_score")
+            if calculated_score is None:
+                calculated_score = calculate_weighted_score(evaluation_data)
+            
+            missing_skills = []
+            for category in ['hard_skills', 'soft_skills', 'experience_requirements']:
+                for skill_name, skill_data in evaluation_data.get(category, {}).items():
+                    if skill_data.get('score', 0) < 5: 
+                        missing_skills.append(skill_name)
+            
+            overall = evaluation_data.get("overall_assessment", {})
+            
             evaluation = EvaluationResult(
-                score=float(evaluation_data.get("score", 0)),
-                missing_skills=evaluation_data.get("missing_skills", []),
-                strength_areas=evaluation_data.get("strength_areas", []),
-                experience_gap_analysis=evaluation_data.get("experience_gap_analysis", {}),
-                cultural_fit_indicators=evaluation_data.get("cultural_fit_indicators", []),
-                red_flags=evaluation_data.get("red_flags", []),
-                remarks=evaluation_data.get("remarks", "Evaluation completed"),
-                recommendation=evaluation_data.get("recommendation", "Further review needed"),
-                interview_focus_areas=evaluation_data.get("interview_focus_areas", [])
+                score=float(calculated_score),
+                missing_skills=missing_skills,
+                strength_areas=overall.get("strengths", []),
+                experience_gap_analysis={},
+                cultural_fit_indicators=[],
+                red_flags=overall.get("concerns", []),
+                remarks=overall.get("summary", "Evaluation completed"),
+                recommendation=overall.get("recommendation", "Further review needed"),
+                interview_focus_areas=[]
             )
             
             logger.info(f"Resume evaluation completed. Score: {evaluation.score}")
@@ -276,11 +486,38 @@ def evaluate_resume(resume_text: str, jd_text: str) -> EvaluationResult:
 
 def generate_email(candidate_name: str, position: str, email_type: str, 
                   evaluation: Optional[EvaluationResult] = None) -> str:
-    """Generate personalized email for interview call or rejection"""
+    """Generate personalized email for candidate"""
     logger.info(f"Generating {email_type} email for {candidate_name}")
     
     try:
         logger.info(f"Calling OpenAI API for {email_type} email generation")
+        
+        if evaluation and isinstance(evaluation, dict):
+            evaluation_data = evaluation
+            evaluation = EvaluationResult(
+                score=float(evaluation_data.get("score", 80)),
+                missing_skills=evaluation_data.get("missing_skills", []),
+                remarks=evaluation_data.get("remarks", "Strong candidate"),
+                recommendation=evaluation_data.get("recommendation", "Consider for interview"),
+                strength_areas=evaluation_data.get("strength_areas", []),
+                experience_gap_analysis=evaluation_data.get("experience_gap_analysis", {}),
+                cultural_fit_indicators=evaluation_data.get("cultural_fit_indicators", []),
+                red_flags=evaluation_data.get("red_flags", []),
+                interview_focus_areas=evaluation_data.get("interview_focus_areas", [])
+            )
+        elif not evaluation:
+
+            evaluation = EvaluationResult(
+                score=80,
+                missing_skills=[],
+                remarks="Strong candidate profile",
+                recommendation="Consider for interview",
+                strength_areas=[],
+                experience_gap_analysis={},
+                cultural_fit_indicators=[],
+                red_flags=[],
+                interview_focus_areas=[]
+            )
         
         if email_type == "interview" and evaluation:
             prompt = PromptTemplates.get_interview_email_prompt(candidate_name, position, evaluation)
