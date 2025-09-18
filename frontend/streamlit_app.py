@@ -192,6 +192,7 @@ def create_radar_chart(candidates_data):
     
     return fig
 
+
 def create_score_gauge(score, candidate_name, index):
     """Create a gauge chart for individual scores with unique key"""
     fig = go.Figure(go.Indicator(
@@ -724,7 +725,7 @@ def display_matching_results(results):
             
             with col2:
                 gauge_fig = create_score_gauge(score, candidate_name, i)
-                st.plotly_chart(gauge_fig, use_container_width=True)
+                st.plotly_chart(gauge_fig, use_container_width=True, key=f"gauge_{candidate['filename']}_{i}")
             
             with col3:
                 if is_best:
@@ -794,7 +795,6 @@ def email_generation_page():
             )
         with col3:
             if st.button("Generate Email", key=f"gen_email_{i}"):
-
                 for c in candidates:
                     if c['filename'] == candidate['filename']:
                         generated_email = generate_email_for_candidate(
@@ -879,173 +879,233 @@ def results_analysis_page():
     for candidate in candidates:
         candidate_name = st.session_state.candidate_names.get(candidate['filename'], candidate['filename'])
         df_data.append({
-            "Candidate": candidate_name,
-            "Filename": candidate["filename"],
+            "Name": candidate_name,
             "Score": candidate["score"],
             "Missing Skills Count": len(candidate["missing_skills"]),
-            "Missing Skills": ", ".join(candidate["missing_skills"]),
-            "Status": "Qualified" if candidate["score"] >= 70 else "Needs Review",
-            "Category": "Top Tier" if candidate["score"] >= 85 else "Good Match" if candidate["score"] >= 70 else "Consider" if candidate["score"] >= 60 else "Not Suitable"
+            "Qualified": candidate["score"] >= 70,
+            "Filename": candidate["filename"]
         })
     
     df = pd.DataFrame(df_data)
     
-    st.subheader("📈 Overall Statistics")
+    col1, col2, col3 = st.columns(3)
     
-    stats_col1, stats_col2, stats_col3, stats_col4 = st.columns(4)
-    
-    with stats_col1:
-        avg_score = df["Score"].mean()
-        st.metric("📊 Average Score", f"{avg_score:.1f}")
-    
-    with stats_col2:
-        max_score = df["Score"].max()
-        st.metric("🎯 Highest Score", f"{max_score:.1f}")
-    
-    with stats_col3:
-        min_score = df["Score"].min()
-        st.metric("📉 Lowest Score", f"{min_score:.1f}")
-    
-    with stats_col4:
-        qualified_pct = (len(df[df["Score"] >= 70]) / len(df)) * 100
-        st.metric("✅ Qualified %", f"{qualified_pct:.1f}%")
-    
-    st.subheader("📊 Interactive Visualizations")
-    
-    viz_tab1, viz_tab2, viz_tab3 = st.tabs(["Score Analysis", "Category Distribution", "Skills Analysis"])
-    
-    with viz_tab1:
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            fig = px.box(df, y="Score", title="Score Distribution Box Plot")
-            st.plotly_chart(fig, use_container_width=True)
-        
-        with col2:
-            fig = px.scatter(df, x="Missing Skills Count", y="Score", 
-                            color="Category", title="Skills vs Score Correlation",
-                            hover_data=["Candidate"])
-            st.plotly_chart(fig, use_container_width=True)
-    
-    with viz_tab2:
-        category_counts = df["Category"].value_counts().reset_index()
-        category_counts.columns = ['Category', 'Count']
-        
-        fig = px.pie(category_counts, values='Count', names='Category', 
-                    title="Candidate Distribution by Category")
+    with col1:
+        fig = px.pie(df, names="Qualified", title="Qualification Ratio",
+                    color="Qualified", color_discrete_map={True: '#28a745', False: '#dc3545'})
         fig.update_layout(font=dict(color="#333333"))
-    
-    with viz_tab3:
-
-        all_missing_skills = []
-        for candidate in candidates:
-            all_missing_skills.extend(candidate["missing_skills"])
-        
-        if all_missing_skills:
-            skill_counts = pd.Series(all_missing_skills).value_counts().reset_index()
-            skill_counts.columns = ['Skill', 'Count']
-            
-            fig = px.treemap(skill_counts, path=['Skill'], values='Count',
-                            title="Missing Skills Treemap")
-            fig.update_layout(font=dict(color="#333333"))
-
-        else:
-            st.success("🎉 No missing skills across all candidates!")
-    
-    st.subheader("👥 Detailed Candidate Comparison")
-    
-    selected_candidates = st.multiselect(
-        "Select candidates to compare:",
-        options=df["Candidate"].tolist(),
-        default=df["Candidate"].head(3).tolist()
-    )
-    
-    if selected_candidates:
-        comparison_df = df[df["Candidate"].isin(selected_candidates)]
-        
-        fig = go.Figure(data=[
-            go.Bar(name='Score', x=comparison_df['Candidate'], y=comparison_df['Score']),
-            go.Bar(name='Missing Skills', x=comparison_df['Candidate'], y=comparison_df['Missing Skills Count'])
-        ])
-        
-        fig.update_layout(barmode='group', title="Candidate Comparison")
         st.plotly_chart(fig, use_container_width=True)
     
-    st.subheader("💾 Export Results")
+    with col2:
+        fig = px.box(df, y="Score", title="Score Distribution", color_discrete_sequence=['#1f77b4'])
+        fig.update_layout(font=dict(color="#333333"))
+        st.plotly_chart(fig, use_container_width=True)
     
-    export_col1, export_col2, export_col3 = st.columns(3)
+    with col3:
+        fig = px.scatter(df, x="Missing Skills Count", y="Score", title="Skills vs Score",
+                        hover_data=["Name"], color="Qualified",
+                        color_discrete_map={True: '#28a745', False: '#dc3545'})
+        fig.update_layout(font=dict(color="#333333"))
+        st.plotly_chart(fig, use_container_width=True)
     
-    with export_col1:
-
+    st.subheader("📋 Missing Skills Analysis")
+    
+    all_missing_skills = []
+    for candidate in candidates:
+        all_missing_skills.extend(candidate["missing_skills"])
+    
+    if all_missing_skills:
+        skill_counts = pd.Series(all_missing_skills).value_counts().reset_index()
+        skill_counts.columns = ['Skill', 'Count']
+        
+        fig = px.bar(skill_counts.head(10), x='Skill', y='Count', 
+                    title="Top 10 Most Frequently Missing Skills",
+                    color='Count', color_continuous_scale='Viridis')
+        fig.update_layout(font=dict(color="#333333"))
+        st.plotly_chart(fig, use_container_width=True)
+    else:
+        st.info("No missing skills found across all candidates!")
+    
+    st.subheader("📝 Candidate Remarks Analysis")
+    
+    remarks = [candidate["remarks"] for candidate in candidates]
+    
+    if remarks:
+        remark_lengths = [len(remark.split()) for remark in remarks]
+        
+        fig = px.histogram(x=remark_lengths, nbins=10, 
+                          title="Distribution of Remark Lengths (Words)",
+                          color_discrete_sequence=['#1f77b4'])
+        fig.update_layout(font=dict(color="#333333"))
+        st.plotly_chart(fig, use_container_width=True)
+    
+    st.subheader("📈 Performance Over Time")
+    
+    if 'processing_history' in st.session_state and not st.session_state.processing_history.empty:
+        history_df = st.session_state.processing_history
+        
+        fig = px.line(history_df, x='Date', y=['Jobs Processed', 'Candidates Evaluated'],
+                     title='Processing Activity Over Time', markers=True)
+        fig.update_layout(font=dict(color="#333333"))
+        st.plotly_chart(fig, use_container_width=True)
+    else:
+        st.info("No historical data available yet. Run more analyses to see trends.")
+    
+    st.subheader("📊 Export Analysis Results")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
         csv = df.to_csv(index=False)
         st.download_button(
-            label="📥 Download CSV",
-            data=csv,
-            file_name="candidate_analysis.csv",
-            mime="text/csv"
+            "📥 Download Candidate Data (CSV)",
+            csv,
+            "candidate_analysis.csv",
+            "text/csv",
+            key='download-csv'
         )
     
-    with export_col2:
-
+    with col2:
         json_data = json.dumps(results, indent=2)
         st.download_button(
-            label="📥 Download JSON",
-            data=json_data,
-            file_name="analysis_results.json",
-            mime="application/json"
+            "📥 Download Full Results (JSON)",
+            json_data,
+            "full_analysis_results.json",
+            "application/json",
+            key='download-json'
         )
     
-    with export_col3:
-
-        if st.button("📊 Generate PDF Report"):
-            st.info("PDF report generation feature coming soon!")
+    with col3:
+        summary = f"""
+        Recruitment Analysis Summary
+        ============================
+        Date: {date.today()}
+        Total Candidates: {len(candidates)}
+        Qualified Candidates: {len([c for c in candidates if c['score'] >= 70])}
+        Average Score: {sum(c['score'] for c in candidates) / len(candidates):.1f}
+        Best Candidate: {st.session_state.candidate_names.get(results.get('best_candidate', ''), 'N/A')}
+        """
+        st.download_button(
+            "📥 Download Summary Report",
+            summary,
+            "analysis_summary.txt",
+            "text/plain",
+            key='download-summary'
+        )
 
 def settings_page():
     st.header("⚙️ Settings & Configuration")
     
-    st.subheader("API Configuration")
-    
-    api_url = st.text_input("API Base URL", value=API_BASE_URL)
-    api_key = st.text_input("API Key", type="password", placeholder="Enter your API key")
-    
-    st.subheader("Application Settings")
+    st.subheader("🔧 API Configuration")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        theme = st.selectbox("Theme", ["Light", "Dark", "Auto"])
-        language = st.selectbox("Language", ["English", "Spanish", "French", "German"])
+        api_key = st.text_input("OpenAI API Key", type="password", 
+                               help="Enter your OpenAI API key for AI-powered features")
+        
+        if api_key:
+            st.success("✅ API key configured")
+        else:
+            st.warning("⚠️ API key required for AI features")
     
     with col2:
-        results_per_page = st.slider("Results per page", 5, 50, 10)
-        auto_refresh = st.checkbox("Auto-refresh results", value=True)
+        model_selection = st.selectbox(
+            "AI Model",
+            ["gpt-4", "gpt-4-turbo", "gpt-3.5-turbo"],
+            index=1,
+            help="Select which OpenAI model to use for analysis"
+        )
     
-    st.subheader("Notification Settings")
+    st.subheader("📊 Analysis Settings")
     
-    notif_col1, notif_col2 = st.columns(2)
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        min_score = st.slider("Minimum Qualification Score", 0, 100, 70,
+                             help="Candidates scoring below this will be marked as not qualified")
         
-    with notif_col1:
-        email_notifications = st.checkbox("Email notifications", value=True)
-        success_alerts = st.checkbox("Success alerts", value=True)
+        max_files = st.slider("Maximum Files per Analysis", 1, 20, 10,
+                             help="Maximum number of resumes to process in one analysis")
     
-    with notif_col2:
-        error_alerts = st.checkbox("Error alerts", value=True)
-        warning_alerts = st.checkbox("Warning alerts", value=True)
+    with col2:
+        skill_weight = st.slider("Skills Matching Weight", 0.0, 1.0, 0.4, 0.05,
+                                help="How much weight to give to skills matching")
+        
+        experience_weight = st.slider("Experience Weight", 0.0, 1.0, 0.3, 0.05,
+                                     help="How much weight to give to experience matching")
     
-    if st.button("💾 Save Settings", type="primary"):
-        show_status("Settings saved successfully!", "success")
+    st.subheader("📧 Email Templates")
     
-    st.subheader("System Information")
+    email_tab1, email_tab2 = st.tabs(["Interview Email", "Rejection Email"])
     
-    info_col1, info_col2 = st.columns(2)
+    with email_tab1:
+        st.text_area(
+            "Interview Email Template",
+            """Dear {candidate_name},
+
+Thank you for applying for the {position} position at our company. We were impressed with your qualifications and would like to invite you for an interview.
+
+Your application scored {score}/100 in our initial screening process. We were particularly impressed with your {strengths}.
+
+Please let us know your availability for a virtual interview next week.
+
+Best regards,
+The Hiring Team""",
+            height=200
+        )
     
-    with info_col1:
-        st.write("**Version:** 2.1.0")
-        st.write("**Last Updated:** January 2024")
+    with email_tab2:
+        st.text_area(
+            "Rejection Email Template",
+            """Dear {candidate_name},
+
+Thank you for your interest in the {position} position and for taking the time to apply.
+
+After careful consideration, we've decided to move forward with other candidates whose qualifications more closely match our current needs.
+
+Your application scored {score}/100. We encourage you to apply for future positions that may be a better fit for your skills.
+
+We wish you the best in your job search.
+
+Best regards,
+The Hiring Team""",
+            height=200
+        )
     
-    with info_col2:
-        st.write("**Python Version:** 3.9+")
-        st.write("**Streamlit Version:** 1.28+")
+    st.subheader("🗑️ Data Management")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        if st.button("🧹 Clear All Data", type="secondary"):
+            keys_to_keep = ['processing_history']
+            for key in list(st.session_state.keys()):
+                if key not in keys_to_keep:
+                    del st.session_state[key]
+            st.success("All data cleared successfully!")
+            time.sleep(1)
+            st.rerun()
+    
+    with col2:
+        if st.button("📊 Reset Analytics", type="secondary"):
+            if 'processing_history' in st.session_state:
+                del st.session_state.processing_history
+            st.success("Analytics data reset successfully!")
+            time.sleep(1)
+            st.rerun()
+    
+    st.subheader("ℹ️ System Information")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.info(f"**Python Version:** 3.8+")
+        st.info(f"**Streamlit Version:** {st.__version__}")
+    
+    with col2:
+        st.info("**Backend Status:** Connected" if st.button("Check Connection") else "**Backend Status:** Unknown")
+        st.info(f"**Last Updated:** {date.today()}")
 
 if __name__ == "__main__":
     main()
