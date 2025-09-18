@@ -203,9 +203,15 @@ async def generate_email(request: dict):
         
         evaluation_data = request.get("evaluation", {})
         evaluation = models.EvaluationResult(
-            score=float(evaluation_data.get("score", 80)),
+            score=float(evaluation_data.get("score")),
             missing_skills=evaluation_data.get("missing_skills", []),
-            remarks=evaluation_data.get("remarks", "Strong candidate")
+            remarks=evaluation_data.get("remarks", "Strong candidate"),
+            recommendation=evaluation_data.get("recommendation", "Consider for interview"),
+            strength_areas=evaluation_data.get("strength_areas", []),
+            experience_gap_analysis=evaluation_data.get("experience_gap_analysis", {}),
+            cultural_fit_indicators=evaluation_data.get("cultural_fit_indicators", []),
+            red_flags=evaluation_data.get("red_flags", []),
+            interview_focus_areas=evaluation_data.get("interview_focus_areas", [])
         )
         
         email_content = ai_services.generate_email(
