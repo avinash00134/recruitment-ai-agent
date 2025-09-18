@@ -1,0 +1,195 @@
+2025-09-18 21:19:39,147 - recruitment_ai - INFO - Configuration loaded successfully
+2025-09-18 21:30:58,365 - recruitment_ai - INFO - Received candidate matching request for 10 resumes
+2025-09-18 21:30:58,388 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA.pdf
+2025-09-18 21:30:58,388 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA.pdf
+2025-09-18 21:30:59,024 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA.pdf
+2025-09-18 21:30:59,024 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:30:59,026 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:31:09,147 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:31:14,944 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:31:15,048 - recruitment_ai - INFO - Resume evaluation completed. Score: 74.0
+2025-09-18 21:31:15,048 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA.pdf - Score: 74.0
+2025-09-18 21:31:15,049 - recruitment_ai - INFO - Processing resume: 10265057.pdf
+2025-09-18 21:31:15,050 - recruitment_ai - INFO - Extracting text from file: 10265057.pdf
+2025-09-18 21:31:15,281 - recruitment_ai - INFO - Successfully extracted text from PDF: 10265057.pdf
+2025-09-18 21:31:15,281 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:31:15,282 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:31:20,245 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:31:26,283 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:31:26,284 - recruitment_ai - INFO - Resume evaluation completed. Score: 44.0
+2025-09-18 21:31:26,284 - recruitment_ai - INFO - Successfully processed 10265057.pdf - Score: 44.0
+2025-09-18 21:31:26,285 - recruitment_ai - INFO - Processing resume: 10553553.pdf
+2025-09-18 21:31:26,285 - recruitment_ai - INFO - Extracting text from file: 10553553.pdf
+2025-09-18 21:31:26,457 - recruitment_ai - INFO - Successfully extracted text from PDF: 10553553.pdf
+2025-09-18 21:31:26,457 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:31:26,457 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:31:31,714 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:31:36,857 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:31:36,857 - recruitment_ai - INFO - Resume evaluation completed. Score: 20.0
+2025-09-18 21:31:36,857 - recruitment_ai - INFO - Successfully processed 10553553.pdf - Score: 20.0
+2025-09-18 21:31:36,857 - recruitment_ai - INFO - Processing resume: 10641230.pdf
+2025-09-18 21:31:36,859 - recruitment_ai - INFO - Extracting text from file: 10641230.pdf
+2025-09-18 21:31:37,081 - recruitment_ai - INFO - Successfully extracted text from PDF: 10641230.pdf
+2025-09-18 21:31:37,081 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:31:37,082 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:31:41,568 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:31:46,904 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:31:46,905 - recruitment_ai - INFO - Resume evaluation completed. Score: 18.0
+2025-09-18 21:31:46,906 - recruitment_ai - INFO - Successfully processed 10641230.pdf - Score: 18.0
+2025-09-18 21:31:46,906 - recruitment_ai - INFO - Processing resume: 10839851.pdf
+2025-09-18 21:31:46,907 - recruitment_ai - INFO - Extracting text from file: 10839851.pdf
+2025-09-18 21:31:47,019 - recruitment_ai - INFO - Successfully extracted text from PDF: 10839851.pdf
+2025-09-18 21:31:47,019 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:31:47,035 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:31:51,922 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:31:57,486 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:31:57,486 - recruitment_ai - INFO - Resume evaluation completed. Score: 10.0
+2025-09-18 21:31:57,487 - recruitment_ai - INFO - Successfully processed 10839851.pdf - Score: 10.0
+2025-09-18 21:31:57,488 - recruitment_ai - INFO - Processing resume: 10840430.pdf
+2025-09-18 21:31:57,488 - recruitment_ai - INFO - Extracting text from file: 10840430.pdf
+2025-09-18 21:31:57,752 - recruitment_ai - INFO - Successfully extracted text from PDF: 10840430.pdf
+2025-09-18 21:31:57,752 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:31:57,752 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:32:03,424 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:32:09,001 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:32:09,001 - recruitment_ai - INFO - Resume evaluation completed. Score: 30.0
+2025-09-18 21:32:09,001 - recruitment_ai - INFO - Successfully processed 10840430.pdf - Score: 30.0
+2025-09-18 21:32:09,001 - recruitment_ai - INFO - Processing resume: 11580408.pdf
+2025-09-18 21:32:09,001 - recruitment_ai - INFO - Extracting text from file: 11580408.pdf
+2025-09-18 21:32:09,167 - recruitment_ai - INFO - Successfully extracted text from PDF: 11580408.pdf
+2025-09-18 21:32:09,167 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:32:09,167 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:32:13,970 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:32:18,709 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:32:18,710 - recruitment_ai - INFO - Resume evaluation completed. Score: 22.0
+2025-09-18 21:32:18,710 - recruitment_ai - INFO - Successfully processed 11580408.pdf - Score: 22.0
+2025-09-18 21:32:18,711 - recruitment_ai - INFO - Processing resume: 91121135.pdf
+2025-09-18 21:32:18,712 - recruitment_ai - INFO - Extracting text from file: 91121135.pdf
+2025-09-18 21:32:18,945 - recruitment_ai - INFO - Successfully extracted text from PDF: 91121135.pdf
+2025-09-18 21:32:18,945 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:32:18,945 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:32:24,042 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:32:29,481 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:32:29,482 - recruitment_ai - INFO - Resume evaluation completed. Score: 10.0
+2025-09-18 21:32:29,482 - recruitment_ai - INFO - Successfully processed 91121135.pdf - Score: 10.0
+2025-09-18 21:32:29,483 - recruitment_ai - INFO - Processing resume: 91635250.pdf
+2025-09-18 21:32:29,484 - recruitment_ai - INFO - Extracting text from file: 91635250.pdf
+2025-09-18 21:32:29,725 - recruitment_ai - INFO - Successfully extracted text from PDF: 91635250.pdf
+2025-09-18 21:32:29,725 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:32:29,725 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:32:34,157 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:32:40,261 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:32:40,262 - recruitment_ai - INFO - Resume evaluation completed. Score: 22.0
+2025-09-18 21:32:40,263 - recruitment_ai - INFO - Successfully processed 91635250.pdf - Score: 22.0
+2025-09-18 21:32:40,264 - recruitment_ai - INFO - Processing resume: 91697974.pdf
+2025-09-18 21:32:40,265 - recruitment_ai - INFO - Extracting text from file: 91697974.pdf
+2025-09-18 21:32:40,517 - recruitment_ai - INFO - Successfully extracted text from PDF: 91697974.pdf
+2025-09-18 21:32:40,517 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:32:40,517 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:32:44,348 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:32:48,363 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:32:48,364 - recruitment_ai - INFO - Resume evaluation completed. Score: 0.0
+2025-09-18 21:32:48,365 - recruitment_ai - INFO - Successfully processed 91697974.pdf - Score: 0.0
+2025-09-18 21:32:48,365 - recruitment_ai - INFO - Best candidate: AI_DEVELOPER_AVINASH_SHARMA.pdf with score 74.0
+2025-09-18 21:32:48,366 - recruitment_ai - INFO - Generating interview email for best candidate
+2025-09-18 21:32:48,366 - recruitment_ai - INFO - Generating interview email for AI_DEVELOPER_AVINASH_SHARMA.pdf
+2025-09-18 21:32:48,367 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-18 21:32:50,874 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-18 21:32:50,874 - recruitment_ai - INFO - Generating rejection email template
+2025-09-18 21:32:50,875 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-18 21:32:50,875 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-18 21:32:53,165 - recruitment_ai - INFO - Rejection email generated successfully
+2025-09-18 21:32:53,167 - recruitment_ai - INFO - Candidate matching completed. Processed 10 files in 114.80 seconds
+2025-09-18 21:34:52,877 - recruitment_ai - INFO - Received email generation request: {'candidate_name': 'Work Experience', 'position': 'Machine Learning Engineer (Remote)', 'email_type': 'interview', 'evaluation': {'score': 74.0, 'remarks': 'The candidate demonstrates strong technical skills in Python, ML frameworks, and cloud deployment. They meet the experience requirement and show potential for growth in MLOps tools and software engineering best practices.', 'missing_skills': []}}
+2025-09-18 21:34:52,951 - recruitment_ai - INFO - Generating interview email for Work Experience
+2025-09-18 21:34:52,951 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-18 21:34:55,765 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-18 21:34:55,767 - recruitment_ai - INFO - Email generated successfully for Work Experience
+2025-09-18 21:48:11,275 - recruitment_ai - INFO - Received candidate matching request for 8 resumes
+2025-09-18 21:48:11,311 - recruitment_ai - INFO - Processing resume: 37242217.pdf
+2025-09-18 21:48:11,318 - recruitment_ai - INFO - Extracting text from file: 37242217.pdf
+2025-09-18 21:48:12,006 - recruitment_ai - INFO - Successfully extracted text from PDF: 37242217.pdf
+2025-09-18 21:48:12,006 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:48:12,010 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:48:18,311 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:48:24,331 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:48:24,373 - recruitment_ai - INFO - Resume evaluation completed. Score: 30.0
+2025-09-18 21:48:24,378 - recruitment_ai - INFO - Successfully processed 37242217.pdf - Score: 30.0
+2025-09-18 21:48:24,391 - recruitment_ai - INFO - Processing resume: 37764298.pdf
+2025-09-18 21:48:24,393 - recruitment_ai - INFO - Extracting text from file: 37764298.pdf
+2025-09-18 21:48:25,124 - recruitment_ai - INFO - Successfully extracted text from PDF: 37764298.pdf
+2025-09-18 21:48:25,124 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:48:25,170 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:48:29,638 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:48:34,435 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:48:34,435 - recruitment_ai - INFO - Resume evaluation completed. Score: 8.0
+2025-09-18 21:48:34,435 - recruitment_ai - INFO - Successfully processed 37764298.pdf - Score: 8.0
+2025-09-18 21:48:34,435 - recruitment_ai - INFO - Processing resume: 38753827.pdf
+2025-09-18 21:48:34,435 - recruitment_ai - INFO - Extracting text from file: 38753827.pdf
+2025-09-18 21:48:34,921 - recruitment_ai - INFO - Successfully extracted text from PDF: 38753827.pdf
+2025-09-18 21:48:34,921 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:48:34,921 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:48:39,986 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:48:46,920 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:48:46,921 - recruitment_ai - INFO - Resume evaluation completed. Score: 18.0
+2025-09-18 21:48:46,921 - recruitment_ai - INFO - Successfully processed 38753827.pdf - Score: 18.0
+2025-09-18 21:48:46,923 - recruitment_ai - INFO - Processing resume: 39413067.pdf
+2025-09-18 21:48:46,923 - recruitment_ai - INFO - Extracting text from file: 39413067.pdf
+2025-09-18 21:48:47,122 - recruitment_ai - INFO - Successfully extracted text from PDF: 39413067.pdf
+2025-09-18 21:48:47,122 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:48:47,123 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:48:52,219 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:48:57,988 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:48:57,988 - recruitment_ai - INFO - Resume evaluation completed. Score: 28.0
+2025-09-18 21:48:57,989 - recruitment_ai - INFO - Successfully processed 39413067.pdf - Score: 28.0
+2025-09-18 21:48:57,989 - recruitment_ai - INFO - Processing resume: 39718499.pdf
+2025-09-18 21:48:57,989 - recruitment_ai - INFO - Extracting text from file: 39718499.pdf
+2025-09-18 21:48:58,165 - recruitment_ai - INFO - Successfully extracted text from PDF: 39718499.pdf
+2025-09-18 21:48:58,165 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:48:58,165 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:49:02,229 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:49:06,938 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:49:06,938 - recruitment_ai - INFO - Resume evaluation completed. Score: 10.0
+2025-09-18 21:49:06,938 - recruitment_ai - INFO - Successfully processed 39718499.pdf - Score: 10.0
+2025-09-18 21:49:06,938 - recruitment_ai - INFO - Processing resume: 40018190.pdf
+2025-09-18 21:49:06,941 - recruitment_ai - INFO - Extracting text from file: 40018190.pdf
+2025-09-18 21:49:07,139 - recruitment_ai - INFO - Successfully extracted text from PDF: 40018190.pdf
+2025-09-18 21:49:07,140 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:49:07,140 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:49:11,938 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:49:18,174 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:49:18,174 - recruitment_ai - INFO - Resume evaluation completed. Score: 10.0
+2025-09-18 21:49:18,174 - recruitment_ai - INFO - Successfully processed 40018190.pdf - Score: 10.0
+2025-09-18 21:49:18,179 - recruitment_ai - INFO - Processing resume: 41344156.pdf
+2025-09-18 21:49:18,180 - recruitment_ai - INFO - Extracting text from file: 41344156.pdf
+2025-09-18 21:49:18,948 - recruitment_ai - INFO - Successfully extracted text from PDF: 41344156.pdf
+2025-09-18 21:49:18,950 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:49:18,951 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:49:23,260 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:49:28,702 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:49:28,702 - recruitment_ai - INFO - Resume evaluation completed. Score: 10.0
+2025-09-18 21:49:28,702 - recruitment_ai - INFO - Successfully processed 41344156.pdf - Score: 10.0
+2025-09-18 21:49:28,702 - recruitment_ai - INFO - Processing resume: AI_DEVELOPER_AVINASH_SHARMA.pdf
+2025-09-18 21:49:28,702 - recruitment_ai - INFO - Extracting text from file: AI_DEVELOPER_AVINASH_SHARMA.pdf
+2025-09-18 21:49:29,111 - recruitment_ai - INFO - Successfully extracted text from PDF: AI_DEVELOPER_AVINASH_SHARMA.pdf
+2025-09-18 21:49:29,113 - recruitment_ai - INFO - Evaluating resume against job description with dynamic scoring
+2025-09-18 21:49:29,113 - recruitment_ai - INFO - Analyzing job description to extract evaluation criteria
+2025-09-18 21:49:33,826 - recruitment_ai - INFO - Job description analysis completed successfully
+2025-09-18 21:49:39,997 - recruitment_ai - INFO - Received evaluation response from OpenAI
+2025-09-18 21:49:39,997 - recruitment_ai - INFO - Resume evaluation completed. Score: 84.0
+2025-09-18 21:49:39,997 - recruitment_ai - INFO - Successfully processed AI_DEVELOPER_AVINASH_SHARMA.pdf - Score: 84.0
+2025-09-18 21:49:39,997 - recruitment_ai - INFO - Best candidate: AI_DEVELOPER_AVINASH_SHARMA.pdf with score 84.0
+2025-09-18 21:49:39,997 - recruitment_ai - INFO - Generating interview email for best candidate
+2025-09-18 21:49:39,997 - recruitment_ai - INFO - Generating interview email for AI_DEVELOPER_AVINASH_SHARMA.pdf
+2025-09-18 21:49:40,018 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-18 21:49:42,624 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-18 21:49:42,624 - recruitment_ai - INFO - Generating rejection email template
+2025-09-18 21:49:42,624 - recruitment_ai - INFO - Generating rejection email for Candidate
+2025-09-18 21:49:42,624 - recruitment_ai - INFO - Calling OpenAI API for rejection email generation
+2025-09-18 21:49:45,128 - recruitment_ai - INFO - Rejection email generated successfully
+2025-09-18 21:49:45,129 - recruitment_ai - INFO - Candidate matching completed. Processed 8 files in 93.86 seconds
+2025-09-18 21:50:57,142 - recruitment_ai - INFO - Received email generation request: {'candidate_name': 'Work Experience', 'position': 'Machine Learning Engineer (Remote)', 'email_type': 'interview', 'evaluation': {'score': 84.0, 'remarks': 'The candidate demonstrates strong proficiency in key technical skills required for the Machine Learning Engineer role. They have relevant experience in ML frameworks, model deployment, and AI applications. Some exposure to MLOps tools and experience in healthcare data further strengthen their profile.', 'missing_skills': []}}
+2025-09-18 21:50:57,150 - recruitment_ai - INFO - Generating interview email for Work Experience
+2025-09-18 21:50:57,150 - recruitment_ai - INFO - Calling OpenAI API for interview email generation
+2025-09-18 21:51:02,699 - recruitment_ai - INFO - Interview email generated successfully
+2025-09-18 21:51:02,699 - recruitment_ai - INFO - Email generated successfully for Work Experience
