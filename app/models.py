@@ -14,7 +14,13 @@ class JobDescriptionRequest(BaseModel):
 class EvaluationResult(BaseModel):
     score: float = Field(..., ge=0, le=100, description="Matching score out of 100")
     missing_skills: List[str] = Field(..., description="List of missing skills")
+    strength_areas: List[str] = Field(default_factory=list, description="List of strength areas")
+    experience_gap_analysis: Dict[str, Any] = Field(default_factory=dict, description="Experience gap analysis")
+    cultural_fit_indicators: List[str] = Field(default_factory=list, description="Cultural fit indicators")
+    red_flags: List[str] = Field(default_factory=list, description="List of red flags")
     remarks: str = Field(..., description="Evaluation remarks")
+    recommendation: str = Field(..., description="Recommendation")
+    interview_focus_areas: List[str] = Field(default_factory=list, description="Interview focus areas")
 
 class CandidateResult(BaseModel):
     filename: str = Field(..., description="Resume filename")
